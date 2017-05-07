@@ -270,7 +270,12 @@ qx.Class.define("cropper.Cropper", {
          * @return {Widget} a frame
          */
         __makeFrame : function() {
-            var dotted = new qx.ui.decoration.Single(1, 'dotted', '#ddd');
+            var dotted = new qx.ui.decoration.Decorator().set({
+                style: 'dotted',
+                width: 1,
+                color: 'rgba(0,0,0,0.5)'
+            });
+            
 
             var widget = new qx.ui.core.Widget().set({
                 allowGrowY : true,
